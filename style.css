@@ -1,19 +1,19 @@
 body { 
     background:rgb(255, 0, 0); 
-    color: rgb(0, 0, 0); 
+    color: rgb(255, 0, 0); 
     padding: 10px; 
     font-family: Arial, sans-serif;
 }
 
 #all-contents {
     max-width: 800px; 
-    margin:auto;
+    margin: auto;
 }
 
     /* navigation menu */
 nav { 
     background: rgb(255, 0, 0);
-    margin:o auto;
+    margin: 0 auto;
     display: flex;
     padding: 20px;
     margin-bottom: 20px;
@@ -24,7 +24,7 @@ h1 {
     align-items: center;
     color: white;
     flex: 1;
-    margin: 0
+    margin: 0;
 }
 
 #nav-ul {
@@ -36,7 +36,8 @@ h1 {
 
 .nav-li {
     display: inline-block;
-    padding:0 10px;}
+    padding:0 10px;
+}
 
 a {
     text-decoration: none;

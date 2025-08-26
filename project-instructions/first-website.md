@@ -875,7 +875,7 @@ After completing this TODO, your `<nav>` section should look like this:
 
      ```css
      body {
-       background: #2a2a2a;
+       background: #ff0000ff;
        color: #ddd;
      }
 
