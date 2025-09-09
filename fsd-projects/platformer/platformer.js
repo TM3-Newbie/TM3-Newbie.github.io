@@ -39,8 +39,9 @@ $(function () {
       createPlatform(950,600, 2, 5, "black");
       createPlatform(1000,400, 5, 5, "gold");
       createPlatform(900,350, 25, 5, "gold");
-
-
+      createPlatform(600,300, 100, 5, "green");
+      createPlatform(500,350, 100, 5, "green");
+      createPlatform(300,450, 100, 5, "green");
 
     // TODO 3 - Create Collectables
       createCollectable("database", 725, 150,.1,1.1);
