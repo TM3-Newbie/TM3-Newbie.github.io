@@ -83,10 +83,13 @@
           moveBoxTo(boardWidth); // Moves box to right edge
           positionX = positionX + speed; // Increases variableName by 10
           
-          if (posistionX > boardWidth) 
+          if (posistionX > boardWidth); 
           {speed = speed * -1;}
+
+          if (positionX < 0);  
+          {speed *= -1;}
           
-          if (posistionX < 0) 
+          if (posistionX < 0); 
           { speed = speed *= -1;}
           
         }
