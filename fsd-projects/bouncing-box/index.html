@@ -8,7 +8,9 @@
       .box {
         width: 70px;
         height: 70px;
-        background-color: teal;
+        background-color: rgb(255, 0, 0);
+        background-image: url("paper.gif");
+        background-color: #000000;
         font-size: 300%;
         text-align: center;
         user-select: none;
@@ -17,6 +19,9 @@
         top: 100px;
         /* Change me! */
         left: 0px;
+       body {
+ 
+}
       }
 
       .board {
@@ -72,15 +77,16 @@
         var positionX = 0;
         var points = 0;
         var speed = 10;
-
-
+        var positionY;
+        var speedY;
+        var boardHeight = jQuery(window).height();
         /**
          * This Function will be called 20 times/second.
          * Each time it is called, it should move the Box to a new location.
          * If the box drifts off the screen, turn it around!
          */
         function update() {
-          moveBoxTo(positionX); // Moves box to right edge
+          moveBoxTo(positionX, positionY); // Moves box to right edge
           positionX = positionX + speed; // Increases variableName by 10
           
           if (positionX > boardWidth) 
@@ -92,6 +98,14 @@
           if (posistionX < 0)
           {speed *= -1;}
           
+          if (positionY > boardHeight) 
+          {speed *= -1;}
+
+          if (positionY < 0)  
+          {speed *= -1;}
+          
+          if (positionY < 0)
+          {speed *= -1;}
         }
 
         /**
