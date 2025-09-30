@@ -10,8 +10,9 @@
         height: 70px;
         background-color: rgb(255, 0, 0);
         body {
-        background-image: url("paper.gif");
-        background-color: #000000;}
+        background-image: url("green.gif");
+        background-color: #000000;
+      }
         font-size: 300%;
         text-align: center;
         user-select: none;
@@ -45,10 +46,14 @@
         var box = jQuery(".box"); // reference to the HTML .box element
         var board = jQuery(".board"); // reference to the HTML .board element
         var boardWidth = board.width(); // the maximum X-Coordinate of the screen
-
+        var boardHeight = board.height(); // the maximum Y-Coordinate of the screen
         // update the boardWidth variable when the window is resized
         jQuery(window).on("resize", function () {
           boardWidth = board.width();
+        });
+         // update the boardHeight variable when the window is resized
+        jQuery(window).on("resize", function () {
+          boardHeight = board.height();
         });
 
         // Every 50 milliseconds, call the update Function (see below)
@@ -75,16 +80,17 @@
         var positionX = 0;
         var points = 0;
         var speed = 10;
-        var positionY;
-        var speedY;
+        var positionY = 0;
+        var speedY = 10;
         var boardHeight = jQuery(window).height();
+        var randNum = Math.random() * 100;
         /**
          * This Function will be called 20 times/second.
          * Each time it is called, it should move the Box to a new location.
          * If the box drifts off the screen, turn it around!
          */
         function update() {
-          moveBoxTo(positionX, positionY); // Moves box to right edge
+          moveBoxTo(positionX, positionY); // Moves box to center
           positionX = positionX + speed; // Increases variableName by 10
           
           if (positionX > boardWidth) 
@@ -115,6 +121,7 @@
          */
         function handleBoxClick() {
           positionX = 0;
+          positionY = 0;
           changeBoxText(points);
           points++; // Increases variableName by 1
           speed = 3 * points + 10; // Adds 3 to variableName
